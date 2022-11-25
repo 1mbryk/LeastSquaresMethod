@@ -22,7 +22,16 @@ int main(int argc, char **argv)
     
     cout << "Residual Variance: " << GetResidualVarianse(vector_x, vector_y, polynomial_coeffs, polynomial_degree, points_amount) << endl;
     
-    PlotGraph(argc, argv, polynomial_degree, polynomial_coeffs, vector_x, vector_y, points_amount);
+    PlottingGraph graph(argc, argv, polynomial_degree,  points_amount, polynomial_coeffs, vector_x, vector_y);
+    delete [] vector_x;
+    delete [] vector_y;
+    for (int i = 0; i < polynomial_degree; ++i)
+    {
+        delete [] sums_powers_matrix[i];
+    }
+    delete [] sums_powers_matrix;
+    delete [] right_part;
+    delete [] polynomial_coeffs;
     return 0;
 }
 

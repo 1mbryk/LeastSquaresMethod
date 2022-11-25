@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 
-#include "PlotGraph.hpp"
+#include "PlotGraph.hpp"
+//#include "PlotGraph.cpp"
 #include "Functions.hpp"
 #include "GaussMethod.hpp"
 
